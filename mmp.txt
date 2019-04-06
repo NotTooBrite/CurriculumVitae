@@ -22,6 +22,7 @@ I am a software Quality Assurance analyst with North American MedTech Group.
 In my current role I have been tasked with verifying the functionality of the MMP application.
 This domain is the health care industry.
 MMP (Manage My Patient) is a Web based application.
+MMP  is categorized into different modules (patient, doctor, admin user, insurance agent) based on end user role.'
 The end users are healthcare industry professionals:  physicians, patients, administrators, insurance company agents.
 MMP is used in doctor's offices.  Patients can register at the portal and make appointments, view their medical records, pay their biils, refill their prescriptions, submit insurance claims.
 
@@ -30,13 +31,14 @@ administrators can approve patient registrations, and so on.
 
 Manage My Patient (MMP) also provides  robust, real-time analytics through customizable reports and dashboards.
 
-The frontend is a Browser based web client using Javascript and HTML.
-The backend is an Apache Tomcat server on a Linux machine implemented in PHP.
-The database is MySQL (MariaDB).
+MMP uses a 3 Tier architecture.
 
-MMP software is categorized into different modules (patient, doctor, admin user, insurance agent) based on end user role.
+Tier 1, the frontend is a Browser based web client. It uses Javascript and HTML.
+Tier 2, the backend is an Apache Tomcat server on a Linux machine implemented in PHP.
+Tier 3 is is a MySQL database (MariaDB).
 
-The backend uses a REST architecture where the resources (patient, doctor, appointment) are mapped into the URL and the HTTP methods in a RESTful manner.
+
+Between Tier 1 and Tier 2 is the WebAPI middleware.  This uses a REST architecture where the resources (patient, doctor, appointment) are mapped into the URL and the HTTP methods in a RESTful manner.
 Each request and repsonse is stateless.
 
 As a tester,
@@ -44,7 +46,7 @@ As a tester,
 (a)  I reviewed the business requirements and designed test scenarios, test cases, and RTMs
 (b)  I executed the test cases manually and recorded defects in JIRA
 (c)  Participated in scrum meetings, reviewed the test plans of co-workers
-(d)  Used SoapUI tool to perform functional testing of the APIs.  Issued GET, POST, PUT, DELETE requests from SoapUI
+(d)  Used the SoapUI tool to perform functional testing of the APIs.  Issued GET, POST, PUT, DELETE requests from SoapUI
      and used assertions within the XML response to validate requirements.
 (e) Peeformed Database testing using SQL queries to verify that user actions on the web client translate to
     meaningful changes in the MySQL database tables.
